@@ -25,7 +25,6 @@ northRed = LED(5)
 northYellow = LED(6)
 northGreen = LED(13)
 
-
 # basic on off commands
 southRed.on()
 sleep(2)
