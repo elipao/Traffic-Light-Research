@@ -10,11 +10,11 @@ RUN = True
 
 # define the State class 
 class State():
-    def __init__(self, name, ns_light, ew_light, delay):
+    def __init__(self, name, ns_light, ew_light, delay_unit):
         self.name = name 
         self.ns_light = ns_light
         self.ew_light = ew_light
-        self.delay = delay 
+        self.delay_unit = delay_unit
 
     # both (greater than 5 cars )= 11 (3 in decimal, decimal favored because it corresponds to index)
     # no traffic (both 0 cars) = 00 (0 in decimal)
@@ -56,7 +56,7 @@ class State():
 
     def delay_time(self):
         print("delay\n")
-        sleep(5)
+        sleep(self.delay_unit)
     
     def transition(self):
         if RUN: 
