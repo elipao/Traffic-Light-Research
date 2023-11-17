@@ -5,6 +5,9 @@ from time import sleep
 # RUN = True 
 TIMER = 0 
 
+# how long does user want the program to run?  
+user_timer = input("Simulation time (in seconds): ")
+
 class State():
     def __init__(self, name, ns_light, ew_light, delay_unit):
         self.name = name 
@@ -25,7 +28,8 @@ class State():
             return 0 
     
     def transition(self):
-        if TIMER <= 60: # runs until a minute 
+        global TIMER 
+        if TIMER <= user_timer: # runs until a minute 
             ns_lights_on(self.ns_light)
             ew_lights_on(self.ew_light)
             sleep(self.delay_unit)
@@ -53,7 +57,3 @@ state_table = {
 }
 
 S0.transition()
-
-    
-
-    
