@@ -6,11 +6,10 @@ from time import sleep
 TIMER = 0 
 
 # how long does user want the program to run?  
-user_timer = input("Simulation time (in seconds): ")
+user_timer = int(input("Simulation time (in seconds): "))
 
 class State():
-    def __init__(self, name, ns_light, ew_light, delay_unit):
-        self.name = name 
+    def __init__(self, ns_light, ew_light, delay_unit):
         self.ns_light = ns_light
         self.ew_light = ew_light
         self.delay_unit = delay_unit
@@ -42,11 +41,11 @@ class State():
         else:
             print("End of simulation\n")
 
-# define each state   
-S0 = State("state 0", "green", "red", 5)
-S1 = State("state 1", "yellow", "red", 1)
-S2 = State("state 2", "red", "green", 5)
-S3 = State("state 3", "red", "yellow", 1)
+# define each state 
+S0 = State("green", "red", 5)
+S1 = State("yellow", "red", 1)
+S2 = State("red", "green", 5)
+S3 = State("red", "yellow", 1)
 
 # create hash table containing the transitions for each of the states 
 state_table = {
