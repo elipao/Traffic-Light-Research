@@ -12,7 +12,3 @@ Main Driver File:
 Instructions: 
 Run driver.py and enter in the amount of time you would like the simulation to run for. Press the red button on the PiTraffic shield to 
 initiate emergency vehicle situation! 
-
-For more information, visit the github repository: https://github.com/elipao/Traffic-Light-Research/ 
-
-Created by Elizabeth Pao
